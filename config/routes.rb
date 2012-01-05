@@ -1,4 +1,16 @@
 Vlo::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/how_it_works"
+
+  get "pages/about"
+
+  get "pages/our__attorneys"
+
+  get "pages/faq"
+
+  get "pages/services_fees"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
