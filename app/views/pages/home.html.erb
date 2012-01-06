@@ -1,2 +1,49 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			<div class="twelve columns">
+				<h3>Get Started</h3>
+				<!-- The Grid -->
+				<div class="row">
+					<div class="six columns">
+						<%= image_tag "screen.png"%>
+					</div>
+					<div class="six columns">
+						<div class="row">
+							<div class="twelve columns">
+								<div class="panel">
+									<h4><%= link_to "Register", new_user_registration_path %></h4>
+									<p>Let us customize your experience</p>
+								</div>
+						 	</div>
+						</div>
+						
+						<div class="row">
+							<div class="twelve columns">
+								<div class="panel">
+									<h4><%= link_to "Services and Fees", pages_services_fees_path %></h4>
+									<p>Use our proven and successful contracts to enhance your career.</p>
+								</div>
+						 	</div>
+						</div>
+						
+						<div class="row">
+							<div class="twelve columns">
+								<div class="panel">
+									<h4><%= link_to "How It Works", pages_how_it_works_path %></h4>
+									<ol>
+										<li><%= link_to "Register", new_user_registration_path %></li>
+										<li>Select your service</li>
+										<li>Focus on your career</li>
+									</ol>
+								</div>
+						 	</div>
+						</div>
+					</div>
+				</div>
+			</div>						
+		</div>
+		
+	</div>
+	<!-- container -->

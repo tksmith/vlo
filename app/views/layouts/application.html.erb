@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vlo</title>
+  <title>VLO</title>
+  <meta charset="utf-8" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<% if notice %>
+		<div class="alert-box success"><%= notice %><a href="" class="close">X</a></div>
+	<% elsif alert %>
+		<div class="alert-box error"><%= alert %><a href="" class="close">X</a></div>
+	<% end %>
+
+	
+	<!-- header -->
+		<div class="row">
+			<div class="twelve columns">
+				<div class="two columns">
+					<h1 class="header">WH&D</h1>
+				</div>
+				<div class="five columns">
+					<h4>WAGNAM HURWITZ & DICKMAN</h4>
+					<p class= "subheader">a full service entertainment, media, & technology firm</p>
+				</div>
+				<div class="five columns" align="right">
+					<% if user_signed_in? %>
+						Signed in as <%= current_user.email %>. Not you?
+						<%= link_to "Sign out >>", destroy_user_session_path, :method => :delete, :class => "small black button" %>
+					<% else %>
+						<%= link_to "Sign up", new_user_registration_path, :class => "small blue button" %><%= link_to "Sign in", new_user_session_path, :class => "small red button" %>
+					<% end %>
+				</div>
+				<hr />
+			</div>
+		</div>
+	<!-- header -->
+		
+	<!-- navbar -->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+				<li><%= link_to "Home", pages_home_path %></li>
+				<li><%= link_to "How It Works", pages_how_it_works_path %></li>
+				<li><%= link_to "Our Attorneys", pages_our__attorneys_path %></li>
+				<li><%= link_to "Services and Fees", pages_services_fees_path %></li>
+				<li><%= link_to "FAQ", pages_faq_path %></li>
+				<li><%= link_to "About", pages_about_path %></li>
+			</ul>
+		</div>
+	</div>
+	<!-- navbar -->
+
+	
+	<%= yield %>
 
 </body>
 </html>
