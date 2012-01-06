@@ -1,1 +1,1 @@
-Wohoo! Now it's changed
+Run rake db:migrate
