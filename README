@@ -1,1 +1,1 @@
-Run rake db:migrate
+Run rake db:migrate and remove the public/index.html file.
