@@ -1,4 +1,18 @@
 Vlo::Application.routes.draw do
+  get "user/index"
+
+  get "user/show"
+
+  get "user/new"
+
+  get "user/create"
+
+  get "user/edit"
+
+  get "user/update"
+
+  get "user/destroy"
+
   devise_for :users
 
   get "pages/home"
@@ -62,6 +76,7 @@ Vlo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  resources :user, :controller => "user"
   root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
