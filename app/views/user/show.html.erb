@@ -2,15 +2,14 @@
 	<div class="row">
 		<div class="twelve columns">
 			<div class="row">
-				<div class="two columns" style="background-color: gray">
-					<h2 align="center">V</h2>
-					<h2 align="center">L</h2>
-					<h2 align="center">O</h2>
+				<div class="two columns">
+					<dl class="nice vertical tabs">
+					  <dd><%= link_to "Edit Profile", edit_user_path, :class=>"inactive"  %></dd>
+					</dl>
 				</div>
 				<div class="eight columns">
-				<h2>Profile Page</h2>
-				<h4 class="subheader">You in a nutshell....</h4>
-					<h1><%= @user.first_name + " " + @user.last_name %></h1>
+				<h2><%= @user.first_name%>'s Profile</h2>
+				<h4 class="subheader">Welcome Back!</h4>
 					<%= @user.first_name%>
 					<%= @user.last_name%>
 				</div>
