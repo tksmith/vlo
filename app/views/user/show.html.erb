@@ -1,19 +1,22 @@
-<div class="container">
-	<div class="row">
-		<div class="twelve columns">
-			<div class="row">
-				<div class="two columns">
-					<dl class="nice vertical tabs">
-					  <dd><%= link_to "Edit Profile", edit_user_path, :class=>"inactive"  %></dd>
-					</dl>
-				</div>
-				<div class="eight columns">
-				<h2><%= @user.first_name%>'s Profile</h2>
-				<h4 class="subheader">Welcome Back!</h4>
-					<%= @user.first_name%>
-					<%= @user.last_name%>
-				</div>
-			</div>
-		</div>
+<div class="row">
+	<div class="two columns">
+		<dl class="nice vertical tabs">
+		  <dd><%= link_to "Profile", user_path %></dd>
+		  <dd><%= link_to "Edit Profile", edit_user_path %></dd>
+		  <% if current_user.admin? %>
+			<dd><%= link_to "Manage Users", all_users_path %></dd>
+		  <% end %>
+		</dl>
+	</div>
+	<div class="eight columns">
+	<h2><%= @user.first_name%>'s Profile</h2>
+	<h4 class="subheader">Welcome Back!</h4>
+		<%= @user.first_name%>
+		<%= @user.last_name%>
+		<% if current_user.admin? %>
+			<p>You're an admin</p>
+		<% else %>
+			<p>You're not an admin</p>
+		<% end %>
 	</div>
 </div>

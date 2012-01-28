@@ -1,14 +1,25 @@
 <h1>Listing Users</h1>
 <table>
+	<thead>
+		<tr>
+			<th>Users</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
 	<% @users.each do |user| %>
-	<tr>
-		<td>
-			<%= user.first_name %>
-		</td>
-		<td>
-			<%= link_to "Show", user %><br />
-			<%= link_to "Edit", user %>
-		</td>
-	</tr>
+	<tbody>
+		<tr>
+			<td>
+				<%= user.first_name %>
+			</td>
+			<td>
+				<%= link_to "Show", user %><br />
+				<%= link_to "Edit", edit_user_path(user) %><br />
+				<%= link_to "Delete", user,
+					:confirm => 'Are you sure?',
+					:method => :delete %>
+			</td>
+		</tr>
+	</tbody>
 	<% end %>
 </table>

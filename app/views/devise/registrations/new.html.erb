@@ -1,43 +1,37 @@
-<div class="container">
-	<div class="row">
-		<div class="twelve columns">
-			<div class="row">
-				<div class="two columns" style="background-color: gray">
-					<h2 align="center">V</h2>
-					<h2 align="center">L</h2>
-					<h2 align="center">O</h2>
-				</div>
-				<div class="eight columns">
-				<h2>Registration!</h2>
-				<h4 class="subheader">You're gonna love it!</h4>
-				
-					<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-					  <%= devise_error_messages! %>
-					
-					  <div><%= f.label :email %>
-					  <%= f.email_field :email, :class => "nice" %></div>
-					
-					  <div><%= f.label :password %>
-					  <%= f.password_field :password, :class => "nice" %></div>
-					
-					  <div><%= f.label :password_confirmation %>
-					  <%= f.password_field :password_confirmation, :class => "nice" %></div>
-					  
-					  <div><%= f.label :first_name %>
-					  <%= f.text_field :first_name, :class => "nice" %></div>
-					  
-					  <div><%= f.label :last_name %>
-					  <%= f.text_field :last_name, :class => "nice" %></div>
-					  
-					  <br />
-					
-					  <div><%= f.submit "Sign up", :class => "nice small radius blue button" %></div>
-					<% end %>
-					
-					<%= render :partial => "devise/shared/links" %>
-				</div>
-			</div>
-		</div>
+<div class="row">
+	<div class="two columns" style="background-color: gray">
+		<h2 align="center">V</h2>
+		<h2 align="center">L</h2>
+		<h2 align="center">O</h2>
+	</div>
+	<div class="eight columns">
+	<h2>Registration!</h2>
+	<h4 class="subheader">You're gonna love it!</h4>
+	
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
+		
+		  <div><%= f.label :email %>
+		  <%= f.email_field :email, :class => "nice" %></div>
+		
+		  <div><%= f.label :password %>
+		  <%= f.password_field :password, :class => "nice" %></div>
+		
+		  <div><%= f.label :password_confirmation %>
+		  <%= f.password_field :password_confirmation, :class => "nice" %></div>
+		  
+		  <div><%= f.label :first_name %>
+		  <%= f.text_field :first_name, :class => "nice" %></div>
+		  
+		  <div><%= f.label :last_name %>
+		  <%= f.text_field :last_name, :class => "nice" %></div>
+		  
+		  <br />
+		
+		  <div><%= f.submit "Sign up", :class => "nice small radius blue button" %></div>
+		<% end %>
+		
+		<%= render :partial => "devise/shared/links" %>
 	</div>
 </div>
 			

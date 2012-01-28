@@ -1,11 +1,17 @@
 class UserController < ApplicationController
+before_filter :get_user, :only => [:show, :edit, :update, :destroy] 
+before_filter :authorize, :only => [:show, :edit, :update, :destroy] 
   
   def index
-    @users = User.all
+    if current_user.admin?
+		@users = User.all
+	else
+		flash[:notice] = "I think ya headed in the wrong direction bruh.."
+		redirect_to(root_path)
+	end
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
@@ -15,11 +21,9 @@ class UserController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(user_path, :notice => "User #{@user.first_name} was successfully updated.") }
@@ -30,6 +34,22 @@ class UserController < ApplicationController
   end
 
   def destroy
+	@user.destroy
+	flash[:notice] = "User #{@user.first_name} deleted"
+	redirect_to(all_users_path)
   end
-
+ 
+  def get_user
+	@user = User.find(params[:id])
+  end
+  
+  def authorize
+		if current_user.id != @user.id
+		unless current_user.admin?
+			flash[:notice] = "I think ya headed in the wrong direction bruh.."
+			redirect_to(root_path)
+		end
+	end
+  end
+  
 end

@@ -1,4 +1,6 @@
 Vlo::Application.routes.draw do
+  resources :user, :controller => "user"
+  
   get "user/index"
 
   get "user/show"
@@ -76,8 +78,9 @@ Vlo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  resources :user, :controller => "user"
+
   root :to => 'pages#home'
+  match 'all' => 'user#index', :as => 'all_users'
 
   # See how all your routes lay out with "rake routes"
 
