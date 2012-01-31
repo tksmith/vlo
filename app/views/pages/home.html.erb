@@ -1,39 +1,56 @@
-<h3>Get Started</h3>
 <!-- The Grid -->
 <div class="row">
-	<div class="six columns">
-		<%= image_tag "screen.png"%>
-	</div>
-	<div class="six columns">
-		<div class="row">
-			<div class="twelve columns">
-				<div class="panel">
-					<h4><%= link_to "Register", new_user_registration_path %></h4>
-					<p>Let us customize your experience</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="twelve columns">
-				<div class="panel">
-					<h4><%= link_to "Services and Fees", pages_services_fees_path %></h4>
-					<p>Use our proven and successful contracts to enhance your career.</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="twelve columns">
-				<div class="panel">
-					<h4><%= link_to "How It Works", pages_how_it_works_path %></h4>
-					<ol>
-						<li><%= link_to "Register", new_user_registration_path %></li>
-						<li>Select your service</li>
-						<li>Focus on your career</li>
-					</ol>
-				</div>
+	
+	<script type ="text/javascript">
+		$(window).load(function() {
+			$('#featured').orbit({
+				bullets: true
+			});
+		});
+	</script>
+	
+	<div class="row">
+		<div class="eight columns centered">
+			<div id= "featured">
+				<%= image_tag "Chrysanthemum.jpg" %>
+				<%= image_tag "Desert.jpg" %>
+				<%= image_tag "Hydrangeas.jpg" %>
 			</div>
 		</div>
 	</div>
+		
+		<span class="orbit-caption" id="caption1">I'm a bad ass caption</span>
+		<span class="orbit-caption" id="caption2">I'm a sick ass caption</span>
+		<span class="orbit-caption" id="caption3">I'm a kick ass caption</span>
+
+	<div class="row">
+		<div class="four columns">
+			<div class="panel">
+				<p><strong>YOU ARE ONE CLICK</strong></p>
+				<ul>
+					<li>Rock solid (and affordable) forms for all your needs</li>
+					<li>An online appointment via Skype</li>
+				</ul>
+			</div>
+		</div>
+		<div class="four columns">
+			<div class="panel">
+				<p><strong>HOW IT WORKS</strong></p>
+				<ol>
+					<li>Register for a secure account page.</li>
+					<li>Complete estate planning worksheet with guidance from your attorney.</li>
+					<li>The attorney reviews your documents and discusses them with you.</li>
+					<li>Pay online and choose from a number of payment options.</li>
+					<li>Receive estate planning documents ready to sign with instructions.</li>
+				</ol>
+			</div>
+		</div>
+		<div class="four columns">
+			<div class="panel">
+				<p><strong>WHO WE ARE</strong></p>
+				<p>Some of the most celebrated attorneys, scholars, and industry experts</p>
+			</div>
+		</div>
+	</div>
+		
 </div>
