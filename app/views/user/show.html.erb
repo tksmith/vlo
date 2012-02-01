@@ -2,7 +2,7 @@
 	<div class="two columns">
 		<dl class="nice vertical tabs">
 		  <dd><%= link_to "Profile", user_path %></dd>
-		  <dd><%= link_to "Edit Profile", edit_user_path %></dd>
+		  <dd><%= link_to "Edit Profile", edit_user_path(@user) %></dd>
 		  <% if current_user.admin? %>
 			<dd><%= link_to "Manage Users", all_users_path %></dd>
 		  <% end %>

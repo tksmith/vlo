@@ -10,7 +10,7 @@
 				<div class="eight columns">
 				<h2>Edit Your Information</h2>
 				<h4 class="subheader">Help us get to know you better.</h4>
-				<p><%= link_to "Back to Profile", current_user %></p>
+				<p><%= link_to "Back to Profile", user_path(@user) %></p>
 					<dl class="nice contained tabs">
 					  <dd><a href="#name" class="active">Name</a></dd>
 					  <dd><a href="#address">Address</a></dd>
@@ -18,31 +18,37 @@
 					  <dd><a href="#legal">Legal Services</a></dd>
 					</dl>
 					
+					<%= form_for(@user) do |f| %>
+					
 					<ul class="nice tabs-content contained">
 					  <li class="active" id="nameTab">
 										
-						<%= form_for(@user) do |f| %>
-						  <div>
+						  <div class="form-element">
 						  	<%= f.label :title %>
 						  	<%= f.select :title, ["Mr.","Mrs.","Ms.","Dr."]%>
 						  </div>
-						  <div>
+						  
+						  <div class="form-element">
 						    <%= f.label :first_name %>
 						    <%= f.text_field :first_name %>
 						  </div>
-						  <div>
+						  
+						  <div class="form-element">
 						    <%= f.label :middle_name %>
 						    <%= f.text_field :middle_name%>
 						  </div>
-						  <div>
+
+						  <div class="form-element">
 						    <%= f.label :last_name%>
 						    <%= f.text_field :last_name %>
 						  </div>
-						  <div>
+						  
+						  <div class="form-element">
 						    <%= f.label :suffix%>
 						    <%= f.select :suffix, ["Jr.","Sr.","Esq."] %>
 						  </div>
-						  <div>
+						  
+						  <div class="form-element">
 						    <%= f.label :nickname%>
 						    <%= f.text_field :nickname %>
 						  </div>
@@ -54,131 +60,99 @@
 					  
 					  <li id="addressTab">
 					  	
-					  	  <div>
-					  	    <%= f.label :street_address %><br/>
+					  	  <div class="form-element">
+					  	    <%= f.label :street_address %>
 					        <%= f.text_field :street_address %>
 					      </div>
-					    
-					      <br/>
-					    
-					      <div>
-					        <%= f.label :city %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :city %>
 					        <%= f.text_field :city %>
 					      </div>
-					    
-					      <br/>
-					    
-					      <div>
-					        <%= f.label :state %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :state %>
 					        <%= f.text_field :state %>
 					      </div>
-					    
-					      <br/>
-					    
-					      <div>
-					        <%= f.label :zip %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :zip %>
 					        <%= f.text_field :zip %>
 					      </div>
-					  	
-					  	  <br/>
-					  	
+
 					  	  <div><%= f.submit "Update", :class => "nice small radius blue button" %></div>
 					  	
 					  </li>
 					  
 					  <li id="contactTab">
 					  	
-					  	  <div>
-					        <%= f.label :email %><br/>
+					  	  <div class="form-element">
+					        <%= f.label :email %>
 					        <%= f.text_field :email %>
 					      </div> 
-					    
-					      <br/>
-					    
-					      <div>
-					        <%= f.label :phone %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :phone %>
 					        <%= f.text_field :phone %>
 					      </div>
-					    
-					      <br/>
-					      
-					      <div>
-					        <%= f.label :website %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :website %>
 					        <%= f.text_field :website %>
 					      </div>
-					    
-					      <br/>
-					      
-					      <div>
-					        <%= f.label :twitter %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :twitter %>
 					        <%= f.text_field :twitter %>
 					      </div>
-					    
-					      <br/>
-					      
-					      <div>
-					        <%= f.label :best_way_to_contact %><br/>
+
+					      <div class="form-element">
+					        <%= f.label :best_way_to_contact %>
 					        <%= f.text_area :best_way_to_contact, :rows => 4 %>
 					      </div>
-					    
-					      <br/>
-					      
+
 					      <div><%= f.submit "Update", :class => "nice small radius blue button" %></div>
 					  </li>
 					  
 					  <li id="legalTab">
-						  <div>
-						    <%= f.label "Have you been represented by an attorney before?" %><br/>
-						    <%= f.radio_button :represented_before, "true" %><%= f.label :represented_before, "Yes"%>
-						    <%= f.radio_button :represented_before, "false" %><%= f.label :represented_before, "No"%>
+						  <div class="form-element">
+						    <%= f.label "Have you been represented by an attorney before?" %>
+						    <%= f.radio_button :represented_before, "true", :class=>"radio" %><%= f.label :represented_before, "Yes", :class=>"radio" %>
+						    <%= f.radio_button :represented_before, "false", :class=>"radio" %><%= f.label :represented_before, "No", :class=>"radio" %>
 					      </div>
-					      
-					      <br/>
-					      
-					      <div>
-						    <%= f.label "If yes, under what circumstances were you represented?" %><br/>
+
+					      <div class="form-element">
+						    <%= f.label "If yes, under what circumstances were you represented?" %>
 					        <%= f.text_area :circumstances, :rows => 4 %>
 					      </div>
-					      
-					      <br/>
-					      
-					      <div>
-						    <%= f.label "Have you consulted an attorney?" %><br/>
-						    <%= f.radio_button :consulted_attorney, "true" %><%= f.label :consulted_attorney, "Yes"%>
-						    <%= f.radio_button :consulted_attorney, "false" %><%= f.label :consulted_attorney, "No"%>
+
+					      <div class="form-element">
+						    <%= f.label "Have you consulted an attorney?" %>
+						    <%= f.radio_button :consulted_attorney, "true", :class=>"radio" %><%= f.label :consulted_attorney, "Yes", :class=>"radio" %>
+						    <%= f.radio_button :consulted_attorney, "false", :class=>"radio" %><%= f.label :consulted_attorney, "No", :class=>"radio" %>
 					      </div>
-					      
-					      <br/>
-					      
-					      <div>
-						    <%= f.label "If yes, why did you not hire the other attorney?" %><br/>
+
+					      <div class="form-element">
+						    <%= f.label "If yes, why did you not hire the other attorney?" %>
 					        <%= f.text_area :why_not_hire_attorney, :rows => 4 %>
 					      </div>
-					      
-					      <br/>
-					      
-					      <div>
-						    <%= f.label "What legal services are needed?" %><br/>
+
+					      <div class="form-element">
+						    <%= f.label "What legal services are needed?" %>
 					        <%= f.text_area :legal_services_needed, :rows => 4 %>
 					      </div>  
-					      
-					      <br/>
-					      
-					      <div>
-						    <%= f.label :parties_involved %><br/>
-						    <%= f.radio_button :parties_involved, "true" %><%= f.label :parties_involved, "Yes"%>
-						    <%= f.radio_button :parties_involved, "false" %><%= f.label :parties_involved, "No"%>
+
+					      <div class="form-element">
+						    <%= f.label :parties_involved %>
+						    <%= f.radio_button :parties_involved, "true", :class=>"radio" %><%= f.label :parties_involved, "Yes", :class=>"radio" %>
+						    <%= f.radio_button :parties_involved, "false", :class=>"radio" %><%= f.label :parties_involved, "No", :class=>"radio" %>
 					      </div>
-					    
-					      <br/>
-					      
-					      <div>
-						    <%= f.label "If yes, please list all parties involved" %><br/>
+
+					      <div class="form-element">
+						    <%= f.label "If yes, please list all parties involved" %>
 					        <%= f.text_area :parties, :rows => 4 %>
 					      </div>
-					      
-					      <br/>
-					    
+
 					      <div><%= f.submit "Update", :class => "nice small radius blue button" %></div>
 					  </li>
 					</ul>

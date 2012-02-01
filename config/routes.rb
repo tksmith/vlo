@@ -80,7 +80,7 @@ Vlo::Application.routes.draw do
   # just remember to delete public/index.html.
 
   root :to => 'pages#home'
-  match 'all' => 'user#index', :as => 'all_users'
+  match '/users' => 'user#index', :as => 'all_users'
 
   # See how all your routes lay out with "rake routes"
 

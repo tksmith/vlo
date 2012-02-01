@@ -93,6 +93,14 @@ p.footer-phone{
 	text-align: center;
 }
 
+.form-element{
+	padding-bottom: 10px;
+}
+
+.radio{
+	display:inline;
+}
+
 #body-text{
 	background: silver;
 }
