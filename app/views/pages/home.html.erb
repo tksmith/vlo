@@ -9,34 +9,42 @@
 		});
 	</script>
 	
+	<% content_for :not_authorized do %>
+
+		<% end %>
+	
 	<div class="row">
 		<div class="eight columns centered">
 			<div id= "featured">
-				<%= image_tag "Chrysanthemum.jpg" %>
-				<%= image_tag "Desert.jpg" %>
-				<%= image_tag "Hydrangeas.jpg" %>
+				<img src="http://cambelt.co/800x300/V-TEAM" data-caption="#caption1" />
+				<img src="http://cambelt.co/800x300/TALK?color=,987423" data-caption="#caption2" />
+				<img src="http://cambelt.co/800x300/DOWNLOAD?color=,25d54e" data-caption="#caption3" />
 			</div>
 		</div>
 	</div>
 		
-		<span class="orbit-caption" id="caption1">I'm a bad ass caption</span>
-		<span class="orbit-caption" id="caption2">I'm a sick ass caption</span>
-		<span class="orbit-caption" id="caption3">I'm a kick ass caption</span>
+		<span class="orbit-caption" id="caption1">YOUR personal TEAM of lawyers for any law, music, media, arts and technology.</span>
+		<span class="orbit-caption" id="caption2">Speak to any of our attorneys virtually through SKYPE anytime.</span>
+		<span class="orbit-caption" id="caption3">Quick and affordable expertly crafted contracts.</span>
+
+	<% content_for :body do %>
 
 	<div class="row">
 		<div class="four columns">
-			<div class="panel">
-				<p><strong>YOU ARE ONE CLICK</strong></p>
-				<ul>
+			<br/>
+			<div class="panel" align="center">
+				<p class="panel-title">ONE CLICK AWAY</p>
+				<ul class="panel-text">
 					<li>Rock solid (and affordable) forms for all your needs</li>
 					<li>An online appointment via Skype</li>
 				</ul>
 			</div>
 		</div>
 		<div class="four columns">
-			<div class="panel">
-				<p><strong>HOW IT WORKS</strong></p>
-				<ol>
+			<br/>
+			<div class="panel" align="center">
+				<p class="panel-title">HOW IT WORKS</p>
+				<ol class="panel-text">
 					<li>Register for a secure account page.</li>
 					<li>Complete estate planning worksheet with guidance from your attorney.</li>
 					<li>The attorney reviews your documents and discusses them with you.</li>
@@ -46,11 +54,17 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<div class="panel">
-				<p><strong>WHO WE ARE</strong></p>
-				<p>Some of the most celebrated attorneys, scholars, and industry experts</p>
+			<br/>
+			<div class="panel" align="center">
+				<p class="panel-title">WHO WE ARE</p>
+				<ul class="panel-text">
+					<li>Some of the most celebrated attorneys, scholars, and industry experts</li>
+				</ul>
 			</div>
 		</div>
 	</div>
+	
+	<% end %>
 		
 </div>
+

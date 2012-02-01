@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 before_filter :get_user, :only => [:show, :edit, :update, :destroy] 
-before_filter :authorize, :only => [:show, :edit, :update, :destroy, :dashboard] 
+before_filter :authorize, :only => [:show, :edit, :update, :destroy] 
   
   def index
     if current_user.admin?

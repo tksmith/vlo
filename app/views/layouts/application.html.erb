@@ -40,15 +40,15 @@
 		
 	<!-- navbar -->
 	<div class="row">
-		<div class="twelve columns">
-			<ul class="nav-bar">
-				<li><%= link_to "Home", pages_home_path %></li>
-				<li><%= link_to "How It Works", pages_how_it_works_path %></li>
-				<li><%= link_to "Our Attorneys", pages_our__attorneys_path %></li>
-				<li><%= link_to "Services and Fees", pages_services_fees_path %></li>
-				<li><%= link_to "FAQ", pages_faq_path %></li>
-				<li><%= link_to "About", pages_about_path %></li>
-			</ul>
+		<div class="ten columns offset-by-two" align="right">
+			<dl class="nav">
+				<dd><%= link_to "Home", pages_home_path, :class => is_active?("home") %></dd>
+				<dd><%= link_to "How It Works", pages_how_it_works_path, :class => is_active?("how_it_works") %></dd>
+				<dd><%= link_to "Our Attorneys", pages_our__attorneys_path, :class => is_active?("our__attorneys") %></dd>
+				<dd><%= link_to "Services and Fees", pages_services_fees_path, :class => is_active?("services_fees") %></dd>
+				<dd><%= link_to "FAQ", pages_faq_path,:class => is_active?("faq") %></dd>
+				<dd><%= link_to "About", pages_about_path, :class => is_active?("about") %></dd>
+			</dl>
 		</div>
 	</div>
 	<!-- navbar -->
@@ -56,7 +56,7 @@
 	<!-- number -->
 	<div class="row">
 		<div class ="twelve columns" align="right">
-				<p>Call us: <strong>555-867-5309</strong></p>
+				<p class="call">Call us: </p><p class="phone">555-867-5309</p>
 		</div>
 	</div>
 	<!-- number -->
@@ -68,7 +68,57 @@
 			<%= yield %>
 		</div>
 	</div>
+
+ 	<div id="body-text">
+	 	<div class="row">
+			<div class="twelve columns">
+				<%= yield :body %>
+			</div>
+		</div>
+	</div>
 	<!-- body -->
+	
+	<!-- footer -->
+	
+	<div id="footer-text">
+		<div class="row">
+			<div class="twelve columns">
+				<div class="four columns">
+					<p class="footer-call">Questions? Call us:</p>
+					<p class="footer-phone">(000)000-0000</p>
+				</div>
+				<div class="four columns" align="center">
+					<p class="footer-call">Social Media</p>
+					<img class="social-media" src="http://cambelt.co/40x40/I" />
+					<img class="social-media" src="http://cambelt.co/40x40/C" />
+					<img class="social-media" src="http://cambelt.co/40x40/O" />
+					<img class="social-media" src="http://cambelt.co/40x40/N" />
+					<img class="social-media" src="http://cambelt.co/40x40/S" />
+				</div>
+				<div class="four columns">
+					<p class="footer-call">Questions? Call us: </p>
+					<p class="footer-phone">(000)000-0000</p>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="ten columns centered" align="center">
+				<p>
+					<strong>Disclaimer:</strong> Please note that this answer does not constitute legal advice, 
+					and should not be relied on, since each state has different laws, 
+					each situation is fact specific, and it is impossible to evaluate a legal problem 
+					without a comprehensive consultation and review of all the facts and documents at issue. 
+					This answer does not create an attorney-client relationship.
+				</p>
+				<p>
+					©2012 Wagnam Hurwitz & Dickman Law Firm. All rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- footer -->
 	
 </body>
 </html>

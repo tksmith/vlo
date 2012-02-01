@@ -6,3 +6,99 @@
  *= require foundation
  *= require_tree . 
 */
+
+dl.nav {
+  	display: block;
+    width: auto;
+    overflow: hidden;
+    margin: -4px 0 18px -9px;
+    padding-top: 4px;
+    float: right;
+}
+
+dl.nav dt, dl.nav dd {
+   float: left;
+   display: inline;
+   margin-left: 9px;
+   margin-bottom: 4px;
+}
+
+dl.nav dt {
+   color: #999;
+   font-weight: normal;
+}
+
+dl.nav dd a {
+   color: silver;
+   padding: 0px 5px 0px 5px;
+   text-decoration: none;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+}
+  
+dl.nav dd a.active{
+   color: black;
+   font-weight: bold;
+   font-size: 1.2em;
+   padding: 0px 15px 0px 15px;
+}
+
+p.call {
+	color: silver;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: fantasy;
+	display:inline;
+}
+
+p.phone {
+	color: black;
+	font-size: 2.5em;
+	font-weight: bold;
+	font-family: Impact, fantasy;
+	float:right;
+	display:inline;
+}
+
+p.panel-title{
+	font-size: 2em;
+	font-weight: bold;
+	display:inline;
+}
+
+ol.panel-text{
+	text-align: left;
+	padding-top:12px;
+}
+
+ul.panel-text{
+	text-align: left;
+	padding-top:12px;
+}
+
+p.footer-call{
+	color: #404040;
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: fantasy;
+	text-align: center;
+	padding-top: 12px;
+}
+
+p.footer-phone{
+	color: #404040;
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: fantasy;
+	text-align: center;
+}
+
+#body-text{
+	background: silver;
+}
+
+#footer-text{
+	background: gray;
+}
+
+
