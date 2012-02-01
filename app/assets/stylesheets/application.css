@@ -48,6 +48,7 @@ p.call {
 	font-size: 2em;
 	font-weight: bold;
 	font-family: fantasy;
+	float:right;
 	display:inline;
 }
 
@@ -58,6 +59,19 @@ p.phone {
 	font-family: Impact, fantasy;
 	float:right;
 	display:inline;
+}
+
+.content{
+	background: white;
+	text-align: center;
+	font-variant:small-caps;
+	font-family: Impact, fantasy;
+	vertical-align: middle;
+	padding: 10px 0px 10px 10px;
+}
+
+img.content{
+	padding:40px 10px 0px 0px;
 }
 
 p.panel-title{
@@ -91,6 +105,14 @@ p.footer-phone{
 	font-weight: bold;
 	font-family: fantasy;
 	text-align: center;
+}
+
+p.disclaimer{
+	text-align:center;
+}
+
+p.copyright{
+	text-align:center;
 }
 
 .form-element{
