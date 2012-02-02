@@ -61,17 +61,27 @@ p.phone {
 	display:inline;
 }
 
-.content{
+.contentbg{
 	background: white;
+	width: 800px;
+	height: 300px;
+}
+
+.content{
+	padding: 20px 0px 0px 15px;
 	text-align: center;
 	font-variant:small-caps;
 	font-family: Impact, fantasy;
 	vertical-align: middle;
-	padding: 10px 0px 10px 10px;
+	background: white;
+}
+
+h3.content{
+	padding: 0px 0px 0px 15px;
 }
 
 img.content{
-	padding:40px 10px 0px 0px;
+	padding:40px 20px 0px 0px;
 }
 
 p.panel-title{
@@ -130,5 +140,3 @@ p.copyright{
 #footer-text{
 	background: gray;
 }
-
-
