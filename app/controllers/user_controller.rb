@@ -5,10 +5,10 @@ before_filter :authorize, :only => [:show, :edit, :update, :destroy]
   def index
     if current_user.admin?
 		@users = User.all
-	else
+	  else
 		flash[:notice] = "I think ya headed in the wrong direction bruh.."
 		redirect_to(root_path)
-	end
+	  end
   end
 
   def show
@@ -34,22 +34,22 @@ before_filter :authorize, :only => [:show, :edit, :update, :destroy]
   end
 
   def destroy
-	@user.destroy
-	flash[:notice] = "User #{@user.first_name} deleted"
-	redirect_to(all_users_path)
+  	@user.destroy
+  	flash[:notice] = "User #{@user.first_name} deleted"
+  	redirect_to(all_users_path)
   end
  
   def get_user
-	@user = User.find(params[:id])
+	  @user = User.find(params[:id])
   end
   
   def authorize
 		if current_user.id != @user.id
-		unless current_user.admin?
-			flash[:notice] = "I think ya headed in the wrong direction bruh.."
-			redirect_to(root_path)
-		end
-	end
+  		unless current_user.admin?
+  			flash[:notice] = "I think ya headed in the wrong direction bruh.."
+  			redirect_to(root_path)
+  		end
+	  end
   end
   
 end
