@@ -7,6 +7,12 @@
  *= require_tree . 
 */
 
+hr{
+	border: 0; 
+	border-bottom: 1px dashed #ccc; 
+	background: #999;
+}
+
 .top-buttons{
 	float: right;
 }
