@@ -14,13 +14,13 @@
 		<% end %>
 	
 	<div class="row">
-		<div class="eight columns centered">
+		<div class="12 columns centered">
 			<div id= "featured">
-				<img src="http://cambelt.co/800x300/Mock-Up?color=,987423" data-caption="#caption" />
+				<img src="http://cambelt.co/980x300/Mock-Up?color=,987423" data-caption="#caption" />
 				<div class="content">
 					<div class="row">
 						<div class="eight columns">
-							<h1 class="content">V-Team</h1>
+							<h1 class="content">V-team</h1>
 							<h3 class="content">Your personal TEAM of lawyers for any law music, media, arts and technology.</h3>
 						</div>
 						<div class="four columns">
@@ -59,41 +59,46 @@
 	<% content_for :body do %>
 
 	<div class="row">
-		<div class="four columns">
-			<br/>
-			<div class="panel" align="center">
-				<p class="panel-title">ONE CLICK AWAY</p>
-				<ul class="panel-text">
-					<li>Rock solid (and affordable) forms for all your needs</li>
-					<li>An online appointment via Skype</li>
-				</ul>
+		<div class="twelve columns">
+			<div class="row">
+				<div class="two columns">
+					<%= image_tag("Mouse.png") %>
+				</div>
+				<div class="ten columns">
+					<p class="panel-title">You are ONE click away from</p>
+					<ul class="panel-text">
+						<li>Rock solid (and affordable) forms for all your needs</li>
+						<li>An online appointment via Skype</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="four columns">
-			<br/>
-			<div class="panel" align="center">
-				<p class="panel-title">HOW IT WORKS</p>
-				<ol class="panel-text">
-					<li>Register for a secure account page.</li>
-					<li>Complete estate planning worksheet with guidance from your attorney.</li>
-					<li>The attorney reviews your documents and discusses them with you.</li>
-					<li>Pay online and choose from a number of payment options.</li>
-					<li>Receive estate planning documents ready to sign with instructions.</li>
-				</ol>
+			<hr/>
+			<div class="row">
+				<div class="two columns">
+					<%= image_tag("Gear.png") %>
+				</div>
+				<div class="ten columns">
+					<p class="panel-title">How it works</p>
+					<ol class="panel-text">
+						<li>Register for a secure account page.</li>
+						<li>Complete estate planning worksheet with guidance from your attorney.</li>
+						<li>The attorney reviews your documents and discusses them with you.</li>
+						<li>Pay online and choose from a number of payment options.</li>
+						<li>Receive estate planning documents ready to sign with instructions.</li>
+					</ol>
+				</div>
 			</div>
-		</div>
-		<div class="four columns">
-			<br/>
-			<div class="panel" align="center">
-				<p class="panel-title">WHO WE ARE</p>
-				<ul class="panel-text">
-					<li>Some of the most celebrated attorneys, scholars, and industry experts</li>
-				</ul>
+			<hr/>
+			<div class="row">
+				<div class="two columns">
+					<%= image_tag("MSN.png") %>
+				</div>
+				<div class="ten columns">
+					<p class="panel-title">Who we are</p>
+						<p class = "panel-text">Some of the most celebrated attorneys, scholars, and industry experts</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	
 	<% end %>
-		
 </div>
-

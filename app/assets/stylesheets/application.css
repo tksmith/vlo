@@ -7,6 +7,10 @@
  *= require_tree . 
 */
 
+.top-buttons{
+	float: right;
+}
+
 dl.nav {
   	display: block;
     width: auto;
@@ -76,7 +80,12 @@ p.phone {
 	background: white;
 }
 
+h1.content{
+	font-size: 5em;
+}
+
 h3.content{
+	font-size: 3em;
 	padding: 0px 0px 0px 15px;
 }
 
@@ -86,18 +95,20 @@ img.content{
 
 p.panel-title{
 	font-size: 2em;
-	font-weight: bold;
-	display:inline;
+	padding-top: 20px;
+	font-variant:small-caps;
+	font-family: Impact, fantasy;
 }
 
-ol.panel-text{
-	text-align: left;
-	padding-top:12px;
+.panel-text{
+	font-weight: bold;
+	font-family: fantasy;
+	font-size: 1.4em;
 }
 
 ul.panel-text{
-	text-align: left;
-	padding-top:12px;
+	list-style-type: disc;
+	list-style-position: inside;
 }
 
 p.footer-call{
