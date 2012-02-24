@@ -14,7 +14,7 @@
 @font-face {
     font-family: 'LeagueGothicRegular';
     src: url('league/League_Gothic-webfont.eot');
-    src: url('league/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+	src: url('league/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
          url('league/League_Gothic-webfont.woff') format('woff'),
          url('league/League_Gothic-webfont.ttf') format('truetype'),
          url('league/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
