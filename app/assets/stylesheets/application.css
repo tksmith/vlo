@@ -13,11 +13,11 @@
 
 @font-face {
     font-family: 'LeagueGothicRegular';
-    src: url('/fonts/League/League_Gothic-webfont.eot');
-	src: url('/fonts/League/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/League/League_Gothic-webfont.woff') format('woff'),
-         url('/fonts/League/League_Gothic-webfont.ttf') format('truetype'),
-         url('/fonts/League/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    src: url('League/League_Gothic-webfont.eot');
+	src: url('League/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('League/League_Gothic-webfont.woff') format('woff'),
+         url('League/League_Gothic-webfont.ttf') format('truetype'),
+         url('League/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -25,11 +25,11 @@
 
 @font-face {
     font-family: 'ChunkFiveRegular';
-    src: url('/fonts/Chunk/Chunkfive-webfont.eot');
-    src: url('/fonts/Chunk/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Chunk/Chunkfive-webfont.woff') format('woff'),
-         url('/fonts/Chunk/Chunkfive-webfont.ttf') format('truetype'),
-         url('/fonts/Chunk/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    src: url('Chunk/Chunkfive-webfont.eot');
+    src: url('Chunk/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Chunk/Chunkfive-webfont.woff') format('woff'),
+         url('Chunk/Chunkfive-webfont.ttf') format('truetype'),
+         url('Chunk/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -96,26 +96,27 @@ p.phone {
 }
 
 .content{
-	padding: 20px 0px 0px 15px;
+	
 	text-align: center;
 	font-variant:small-caps;
-	font-family: Impact, fantasy;
 	vertical-align: middle;
 	background: white;
 }
 
-h1.content{
+h2.content{
 	font-size: 5em;
 	font-family: 'LeagueGothicRegular';
 }
 
 h3.content{
 	font-size: 3em;
+	font-family: Impact, fantasy;
 	padding: 0px 0px 0px 15px;
 }
 
 img.content{
-	padding:40px 20px 0px 0px;
+	height: 100%;
+	width: 100%;
 }
 
 p.panel-title{
@@ -133,6 +134,44 @@ p.panel-title{
 ul.panel-text{
 	list-style-type: disc;
 	list-style-position: inside;
+}
+
+.panel-image{
+	float:right;
+	vertical-align: middle;
+}
+
+p.social-title{
+	font-size: 7em;
+	text-align:center;
+	padding-top: 40px;
+	padding-bottom:15px;
+	font-variant:small-caps;
+	font-family: 'LeagueGothicRegular', fantasy;
+}
+
+.social-icons{
+	float:auto;
+	margin:0px auto;
+	text-align:center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+p.blog-title{
+	font-weight: bold;
+	display: inline;
+}
+
+p.blog-caption{
+	color: grey;
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display:block;
+	padding-bottom:5px;
+	border-bottom: 1px solid #999;
 }
 
 p.footer-call{
@@ -153,12 +192,22 @@ p.footer-phone{
 }
 
 p.disclaimer{
-	text-align:center;
 	font-family: serif;
 }
 
 p.copyright{
 	text-align:center;
+}
+
+p.newsletter{
+	font-weight:bold;
+	font-family:arial, san-serif;
+	padding-top: 10px;
+}
+
+.input-text{
+	padding: 0px;
+	display: inline;
 }
 
 .form-element{
@@ -175,4 +224,9 @@ p.copyright{
 
 #footer-text{
 	background: gray;
+}
+
+.twtr-hd, .twtr-ft
+{
+display: none;
 }

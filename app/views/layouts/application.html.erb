@@ -81,33 +81,71 @@
 	<!-- body -->
 	
 	<!-- footer -->
-	
-	<div id="footer-text">
-		<div class="row">
-			<div class="twelve columns">
-				<div class="four columns">
-					<p class="footer-call">Questions? Call us:</p>
-					<p class="footer-phone">(000)000-0000</p>
-				</div>
-				<div class="four columns">
-					<p class="footer-call">Social Media</p>
-						<div class="nine columns centered">
-							<img class="social-media" src="http://cambelt.co/40x40/I" />
-							<img class="social-media" src="http://cambelt.co/40x40/C" />
-							<img class="social-media" src="http://cambelt.co/40x40/O" />
-							<img class="social-media" src="http://cambelt.co/40x40/N" />
-							<img class="social-media" src="http://cambelt.co/40x40/S" />
-						</div>
-				</div>
-				<div class="four columns">
-					<p class="footer-call">Questions? Call us: </p>
-					<p class="footer-phone">(000)000-0000</p>
+
+	<div class="row">
+		<div class="twelve columns">
+			<div class="four columns">
+				<p class="social-title">Tweets</p>
+				<p><script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+					<script>
+					new TWTR.Widget({
+					  version: 2,
+					  type: 'search',
+					  search: 'rainbow',
+					  interval: 30000,
+					  title: '',
+					  subject: '',
+					  width: 250,
+					  height: 300,
+					  theme: {
+					    shell: {
+					      background: '#ffffff',
+					      color: '#ffffff'
+					    },
+					    tweets: {
+					      background: '#ffffff',
+					      color: '#444444',
+					      links: '#1985b5'
+					    }
+					  },
+					  features: {
+					    scrollbar: false,
+					    loop: true,
+					    live: true,
+					    behavior: 'default'
+					  }
+					}).render().start();
+					</script>
+				</p>
+			</div>
+			<div class="four columns">
+				<p class="social-title">Posts</p>
+				<p class="blog-title">Blog Title</p>
+				<p class="blog-caption">Blog Caption</p>
+				<p class="blog-title">Blog Title</p>
+				<p class="blog-caption">Blog Caption</p>
+				<p class="blog-title">Blog Title</p>
+				<p class="blog-caption">Blog Caption</p>
+				<p class="blog-title">Blog Title</p>
+				<p class="blog-caption">Blog Caption</p>
+			</div>
+			<div class="four columns">
+				<p class="social-title">Connect</p>
+				<div class="social-icons">
+				<%= image_tag("64_facebook.png", :class=>"social-icons") %>
+				<%= image_tag("64_twitter.png", :class=>"social-icons") %>
+				<p class="newsletter">SIGN UP FOR NEW SERVICE ALERTS</p>
+				<input type="text" class="input-text" id="standardNiceInput" />
+				<a href="#" class="nice small radius black button">Submit</a>
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	<div id="footer-text">
 		<br />
 		<div class="row">
-			<div class="twelve columns centered">
+			<div class="twelve columns">
 				<p class="disclaimer">
 					<strong>Disclaimer:</strong> Please note that this answer does not constitute legal advice, 
 					and should not be relied on, since each state has different laws, 

@@ -35,8 +35,8 @@ before_filter :authorize, :only => [:show, :edit, :update, :destroy]
 
   def destroy
   	@user.destroy
-  	flash[:notice] = "User #{@user.first_name} deleted"
-  	redirect_to(all_users_path)
+      flash[:notice] = "User #{@user.first_name} deleted"
+      redirect_to(all_users_path)
   end
  
   def get_user
